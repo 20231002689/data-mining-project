@@ -14,9 +14,11 @@ The prediction model can be applied in health monitoring and fitness planning, h
 Below is an overview of the main models' performance:
 | Model            | Average Error (RMSE) | Accuracy (R²) |
 |------------------|---------------------|---------------|
-| Linear Regression | 11.48               | 0.9673        |
-| Random Forest     | 2.62                | 0.9983        |
-| XGBoost           | 8.21                | 0.9833        |
+| Linear Regression | 11.48               | 0.9670        |
+| Ridge Regression  | 11.48               | 0.9670        |
+| Lasso Regression  | 11.53               | 0.9669        |
+| Random Forest     | 2.64                | 0.9976        |
+| XGBoost           | 1.66                | 0.9991        |
 | Neural Network    | 0.79                | 0.9998        |
 
 - The Neural Network excelled in predicting calories burned, making it ideal for high-precision needs.<br>
