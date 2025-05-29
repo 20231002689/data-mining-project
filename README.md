@@ -28,7 +28,7 @@ Can we accurately predict the number of calories burned during an activity using
 
 ---
 
-## 🛠 Methodology  
+##  Methodology  
 1. Data cleaning and feature engineering  
 2. Standardization using `StandardScaler`  
 3. Model training using:
