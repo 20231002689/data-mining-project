@@ -5,8 +5,8 @@ This project aims to predict calories burned using personal attributes such as g
 The prediction model can be applied in health monitoring and fitness planning, helping users better manage their daily exercise and diet.
 
 ## Dataset
-Data sources：https://www.kaggle.com/datasets/ruchikakumbhar/calories-burnt-prediction  
-Data structure:Contains 15,000 records, 7 features: Gender, Age, Height, Weight, Duration, Heart_Rate, Body_Temp  
+Data sources：https://www.kaggle.com/datasets/ruchikakumbhar/calories-burnt-prediction<br>
+Data structure:Contains 15,000 records, 7 features: Gender, Age, Height, Weight, Duration, Heart_Rate, Body_Temp<br>
 Target variable: Calories (calories burned)
 
 ## Key Findings
@@ -37,6 +37,6 @@ Below is an overview of the main models' performance:
 ## Project Files
 - `calories.csv`: The project dataset, containing 15,000 records and 7 features.
 - `calories_prediction_project.ipynb`: Technical report detailing data preprocessing, model training, and evaluation steps.
-- `figures/`: Contains data visualizations (e.g., histograms, correlation heatmaps, and prediction plots).
+- `figures/`: Contains data visualizations (e.g., histograms, correlation heatmaps,shap plot,and prediction plots).
 - `requirements.txt`: List of required libraries.
 - This `README.md`: Non-technical summary.
