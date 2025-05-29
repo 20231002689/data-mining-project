@@ -1,42 +1,83 @@
-# Non-Technical Summary: Calories Burned Prediction Project
+#  Calories Burned Prediction Using Machine Learning
 
-## Problem Statement
-This project aims to predict calories burned using personal attributes such as gender, age, height, weight, exercise duration, heart rate, and body temperature.<br>
-The prediction model can be applied in health monitoring and fitness planning, helping users better manage their daily exercise and diet.
+**Author**  
+[Hanjun Tang]
 
-## Dataset
-Data sources：https://www.kaggle.com/datasets/ruchikakumbhar/calories-burnt-prediction<br>
-Data structure:Contains 15,000 records, 7 features: Gender, Age, Height, Weight, Duration, Heart_Rate, Body_Temp<br>
-Target variable: Calories (calories burned)
+---
 
-## Key Findings
-- Several machine learning models were used, including Linear Regression, Random Forest, XGBoost, and Neural Network.<br>
-- The Neural Network performed the best, with a prediction accuracy (R²) of 99.98% and an average error (RMSE) of only 0.79 calories.<br>
-- Random Forest came in second, with an R² of 99.83% and an RMSE of 2.62 calories.<br>
-- Exercise duration and heart rate were identified as the most important factors affecting calorie burn.
+##  Abstract  
+This project explores the use of supervised machine learning models to predict calories burned during exercise based on personal physiological attributes. Multiple models were compared, and the neural network showed the highest predictive accuracy (R² = 0.9998). Key findings indicate that heart rate and duration are the most influential predictors. This work supports personalized health monitoring and fitness planning.
 
-## Model Performance
-Below is an overview of the main models' performance:
-| Model            | Average Error (RMSE) | Accuracy (R²) |
-|------------------|---------------------|---------------|
-| Linear Regression | 11.48               | 0.9670        |
-| Ridge Regression  | 11.48               | 0.9670        |
-| Lasso Regression  | 11.53               | 0.9669        |
-| Random Forest     | 2.64                | 0.9976        |
-| XGBoost           | 1.66                | 0.9991        |
-| Neural Network    | 0.79                | 0.9998        |
+---
 
-- The Neural Network excelled in predicting calories burned, making it ideal for high-precision needs.<br>
-- Linear(Ridge,Lasso) Regression had a higher error due to its inability to capture non-linear patterns in the data.
+##  Rationale  
+Calorie tracking is critical for managing fitness goals, weight control, and personalized health recommendations. Manual tracking is error-prone and impractical. A data-driven predictive model simplifies this process and provides more accurate, real-time estimates of energy expenditure.
 
-## Potential Improvements
-- Add polynomial features or interaction terms to improve the Linear Regression model's predictions.<br>
-- Optimize the Neural Network's structure to reduce computational cost and improve practicality.<br>
-- Investigate and fix anomalies in cross-validation results (e.g., unusually small MSE values) to ensure reliability.
+---
 
-## Project Files
-- `calories.csv`: The project dataset, containing 15,000 records and 7 features.
-- `calories_prediction_project.ipynb`: Technical report detailing data preprocessing, model training, and evaluation steps.
-- `figures/`: Contains data visualizations (e.g., histograms, correlation heatmaps,shap plot,and prediction plots).
-- `requirements.txt`: List of required libraries.
-- This `README.md`: Non-technical summary.
+##  Research Question  
+Can we accurately predict the number of calories burned during an activity using personal attributes (e.g., age, weight, heart rate, duration) with supervised machine learning models?
+
+---
+
+##  Data Sources  
+- **Dataset**: [Calories Burnt Prediction Dataset – Kaggle](https://www.kaggle.com/datasets/ruchikakumbhar/calories-burnt-prediction)  
+- **Records**: 15,000 samples  
+- **Features**: Gender, Age, Height, Weight, Duration, Heart Rate, Body Temperature  
+- **Target**: Calories burned
+
+---
+
+## 🛠 Methodology  
+1. Data cleaning and feature engineering  
+2. Standardization using `StandardScaler`  
+3. Model training using:
+   - Linear Regression
+   - Ridge & Lasso
+   - Random Forest
+   - XGBoost
+   - Neural Network (MLPRegressor)  
+4. Hyperparameter tuning with `GridSearchCV`  
+5. Evaluation using RMSE and R²  
+6. Model explainability via SHAP visualizations
+
+---
+
+##  Results  
+
+| Model              | RMSE (↓) | R² Score (↑) |
+|-------------------|-----------|---------------|
+| Linear Regression | 11.48     | 0.9670        |
+| Ridge Regression  | 11.48     | 0.9670        |
+| Lasso Regression  | 11.53     | 0.9669        |
+| Random Forest     | 2.64      | 0.9976        |
+| XGBoost           | 1.66      | 0.9991        |
+| **Neural Network**| **0.79**  | **0.9998**    |
+
+- SHAP analysis confirmed **Duration** and **Heart Rate** as the most important features.
+
+---
+
+##  Next Steps  
+- Optimize Neural Network to reduce complexity and runtime.  
+- Add polynomial/interaction terms for linear models.  
+- Deploy the best model via a web API or mobile fitness tracker app.  
+- Investigate anomalies in cross-validation scoring.
+
+---
+
+##  Conclusion  
+The project achieved highly accurate predictions of calorie burn using machine learning. The neural network model proved to be the most effective. While the results are promising, model deployment and generalization in real-world environments require further validation and simplification.
+
+---
+
+##  Bibliography  
+- Kumbhar, Ruchika. *Calories Burnt Prediction Dataset*. Kaggle, 2021. https://www.kaggle.com/datasets/ruchikakumbhar/calories-burnt-prediction  
+- Lundberg, Scott M., and Su-In Lee. “A Unified Approach to Interpreting Model Predictions.” *Advances in Neural Information Processing Systems*, vol. 30, 2017.  
+- Pedregosa, Fabian, et al. “Scikit-learn: Machine Learning in Python.” *Journal of Machine Learning Research*, vol. 12, 2011.
+
+---
+
+##  Contact and Further Information  
+For questions or collaboration inquiries, please contact:  
+ [tanghanjun051026@hotmail.com]  
