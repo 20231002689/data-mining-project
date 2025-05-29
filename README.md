@@ -5,8 +5,8 @@ This project aims to predict calories burned using personal attributes such as g
 The prediction model can be applied in health monitoring and fitness planning, helping users better manage their daily exercise and diet.
 
 ## Dataset
-Data sources：https://www.kaggle.com/datasets/ruchikakumbhar/calories-burnt-prediction
-Contains 15,000 records, 7 features: Gender, Age, Height, Weight, Duration, Heart_Rate, Body_Temp
+Data sources：https://www.kaggle.com/datasets/ruchikakumbhar/calories-burnt-prediction  
+Data structure:Contains 15,000 records, 7 features: Gender, Age, Height, Weight, Duration, Heart_Rate, Body_Temp  
 Target variable: Calories (calories burned)
 
 ## Key Findings
